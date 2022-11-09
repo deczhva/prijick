@@ -14,13 +14,53 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index', [
+        "title" => "Dashboard"
+    ]);
 });
 
-Route::get('/dashboard', function () {
-    return view('index');
+Route::get('/data-ibu', function () {
+    return view('data-ibu', [
+        "title" => "Data Ibu"
+    ]);
 });
 
-Route::get('/mom', function () {
-    return view('mom');
+Route::get('/data-anak', function () {
+    return view('data-anak', [
+        "title" => "Data Anak"
+    ]);
 });
+
+Route::get('/data-imunisasi', function () {
+    return view('data-imunisasi', [
+        "title" => "Data Imunisasi"
+    ]);
+});
+
+Route::get('/data-vitamin', function () {
+    return view('data-vitamin', [
+        "title" => "Data Vitamin A"
+    ]);
+});
+
+Route::get('/data-kader', function () {
+    return view('data-kader', [
+        "title" => "Data Kader"
+    ]);
+});
+
+Route::get('/data-lansia', function () {
+    return view('data-lansia', [
+        "title" => "Data Lansia"
+    ]);
+});
+
+// Route::get('/', 'PagesController@dashboard');
+// Route::get('/data-ibu', 'PagesController@data-ibu');
+// Route::get('/data-anak', 'PagesController@data-anak');
+// Route::get('/data-imunisasi', 'PagesController@data-imunisasi');
+// Route::get('/data-vitamin', 'PagesController@data-vitamin');
+// Route::get('/data-kader', 'PagesController@data-kader');
+
+
+
