@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | {{ $title }}</title>
+    <title>Kemuning</title>
     
     <link rel="stylesheet" href="assets/css/main/app.css">
     <link rel="stylesheet" href="assets/css/main/app-dark.css">
@@ -61,7 +61,7 @@
                         <a href="/data-ibu">Data Ibu</a>
                     </li>
                     <li class="submenu-item ">
-                        <a class="sidebar-link" href="/data-anak">Data Anak</a>
+                        <a class="sidebar-link" href="/balita">Data Balita</a>
                     </li>
                     <li class="submenu-item ">
                         <a class="sidebar-link" href="/data-imunisasi">Data Imunisasi</a>
