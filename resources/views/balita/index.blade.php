@@ -1,7 +1,8 @@
 @extends('layouts.main')
 
 @section('container')
-    <div class="page-heading">
+@include('balita.forms')
+<div class="page-heading">
     <div class="page-title">
         <div class="row">
             <div class="col-12 col-md-6 order-md-1 order-last mb-3">
@@ -21,10 +22,9 @@
     <section class="section">
         <div class="card">
     <div class="card-body">
-                <button type="button" class="btn btn mb-3" data-bs-toggle="modal" data-bs-target="#modal1" style="background-color:#4f69db">
-                    <a href="" style="color:white" target="_blank">
-                    Tambah Data</a>
-                </button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Launch demo modal
+          </button>
                 <table class="table table-striped" id="table1">
                     <thead>
                         <tr>
