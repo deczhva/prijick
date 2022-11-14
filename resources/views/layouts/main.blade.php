@@ -58,23 +58,18 @@
                 </a>
                 <ul class="submenu ">
                     <li class="submenu-item ">
-                        <a href="/data-ibu">Data Ibu</a>
-                    </li>
-                    <li class="submenu-item ">
                         <a class="sidebar-link" href="/balita">Data Balita</a>
                     </li>
                     <li class="submenu-item ">
-                        <a class="sidebar-link" href="/data-imunisasi">Data Imunisasi</a>
+                        <a class="sidebar-link" href="/lansia">Data Lansia</a>
                     </li>
                     <li class="submenu-item ">
-                        <a class="sidebar-link" href="/data-vitamin">Data Vitamin A</a>
+                        <a class="sidebar-link" href="/vitamin">Data Vitamin A</a>
                     </li>
                     <li class="submenu-item ">
-                        <a class="sidebar-link" href="/data-kader">Data Kader</a>
+                        <a class="sidebar-link" href="/kader">Data Kader</a>
                     </li>
-                    <li class="submenu-item ">
-                        <a class="sidebar-link" href="/data-lansia">Data Lansia</a>
-                    </li>
+                    
                 </ul>
             </li>
             

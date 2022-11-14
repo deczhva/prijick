@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\BalitaController;
+use App\Http\Controllers\LansiaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,7 +27,7 @@ Auth::routes();
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/balita', [BalitaController::class, 'index']);
-
+Route::get('/lansia', [LansiaController::class, 'index']);
 
 // Route::get('/data-ibu', function () {
 //     return view('data-ibu', [

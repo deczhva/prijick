@@ -28,10 +28,15 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Nama</th>
-                            <th>Alamat</th>
                             <th>NIK</th>
-                            <th>Tanggal</th>
+                            <th>Nama</th>
+                            <th>Tinggi Badan</th>
+                            <th>Berat Badan</th>
+                            <th>Tensi</th>
+                            <th>Gula Darah</th>
+                            <th>Asam Urat</th>
+                            <th>Kolesterol</th>
+                            <th>Alamat</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>

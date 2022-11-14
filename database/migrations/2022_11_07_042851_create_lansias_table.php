@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('lansias', function (Blueprint $table) {
             $table->id();
+            $table->string('nik');
             $table->string('nama');
             $table->string('tinggi_bdn');
             $table->string('berat_bdn');
@@ -22,6 +23,7 @@ return new class extends Migration
             $table->string('gula_darah');
             $table->string('asam_urat');
             $table->string('kolesterol');
+            $table->string('alamat');
             $table->timestamps();
         });
     }

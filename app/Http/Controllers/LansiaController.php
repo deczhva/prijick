@@ -3,10 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\Lansia;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class LansiaController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +19,8 @@ class LansiaController extends Controller
      */
     public function index()
     {
-        //
+        $lansia = Lansia::all();
+        return view('lansia.index', compact('lansia'));
     }
 
     /**
@@ -35,7 +41,18 @@ class LansiaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $lansia = Lansia::create([
+            'nik' => $request->nik,
+            'nama' => $request->nama,
+            'tinggi_bdn' => $request->tinggi_bdn,
+            'berat_bdn' => $request->berat_bdn,
+            'tensi' => $request->tensi,
+            'gula_darah' => $request->gula_darah,
+            'asam_urat' => $request->asam_urat,
+            'kolesterol' => $request->kolesterol
+        ]);
+
+        return redirect()->back()->with('status', 'success')->with('lansia', $lansia);
     }
 
     /**
@@ -46,7 +63,8 @@ class LansiaController extends Controller
      */
     public function show(Lansia $lansia)
     {
-        //
+        $lansia = Lansia::findOrFail($lansia);
+        return view('lansia.show', compact('lansia'));
     }
 
     /**
@@ -57,7 +75,8 @@ class LansiaController extends Controller
      */
     public function edit(Lansia $lansia)
     {
-        //
+        $lansia = Lansia::findOrFail($lansia);
+        return view('lansia.edit', compact('lansia'));
     }
 
     /**
@@ -80,6 +99,9 @@ class LansiaController extends Controller
      */
     public function destroy(Lansia $lansia)
     {
-        //
+        $lansia = Lansia::findOrFail($lansia);
+        $lansia->delete();
+        return redirect()->route('lansia.index')
+            ->with('success', 'Data Berhasil dihapus!');
     }
 }
