@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class VitaminAController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +18,8 @@ class VitaminAController extends Controller
      */
     public function index()
     {
-        //
+        $vitaminA = VitaminA::all();
+        return view('vitamin.index', compact('vitaminA'));
     }
 
     /**
@@ -35,7 +40,11 @@ class VitaminAController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $vitaminA = VitaminA::create([
+            
+        ]);
+
+        return redirect()->back()->with('status', 'success')->with('vitamin', $vitaminA);
     }
 
     /**
