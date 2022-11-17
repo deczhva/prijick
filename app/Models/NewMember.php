@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class NewMember extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'nama',
+        'alamat',
+        'nama_ortu',
+        'nik'
+    ];
 }

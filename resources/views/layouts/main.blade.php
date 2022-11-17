@@ -16,14 +16,14 @@
 
 </head>
 
-<body>
+<body style="background-color: #E7F6F2">
     <div id="app">
         <div id="sidebar" class="active">
-            <div class="sidebar-wrapper active">
+            <div class="sidebar-wrapper active" style="background-color: #A5C9CA">
     <div class="sidebar-header position-relative">
         <div class="d-flex justify-content-between align-items-center">
             <div class="logo m-2">
-                <a href="/">Posyandu</a>
+                <a href="/" style="color: #395B64">Posyandu</a>
             </div>
             <div class="theme-toggle d-flex gap-2  align-items-center mt-2">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--system-uicons" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M10.5 14.5c2.219 0 4-1.763 4-3.982a4.003 4.003 0 0 0-4-4.018c-2.219 0-4 1.781-4 4c0 2.219 1.781 4 4 4zM4.136 4.136L5.55 5.55m9.9 9.9l1.414 1.414M1.5 10.5h2m14 0h2M4.135 16.863L5.55 15.45m9.899-9.9l1.414-1.415M10.5 19.5v-2m0-14v-2" opacity=".3"></path><g transform="translate(-210 -1)"><path d="M220.5 2.5v2m6.5.5l-1.5 1.5"></path><circle cx="220.5" cy="11.5" r="4"></circle><path d="m214 5l1.5 1.5m5 14v-2m6.5-.5l-1.5-1.5M214 18l1.5-1.5m-4-5h2m14 0h2"></path></g></g></svg>
@@ -43,8 +43,8 @@
             <li class="sidebar-title">Menu</li>
             
             <li
-                class="sidebar-item active ">
-                <a href="/" class='sidebar-link'>
+                class="sidebar-item active">
+                <a href="/" class='sidebar-link' style="background-color: #395B64">
                     <i class="bi bi-grid-fill"></i>
                     <span>Dashboard</span>
                 </a>
@@ -54,7 +54,7 @@
                 class="sidebar-item  has-sub">
                 <a href="#" class='sidebar-link'>
                     <i class="bi bi-stack"></i>
-                    <span>Data Mazer</span>
+                    <span>Data</span>
                 </a>
                 <ul class="submenu ">
                     <li class="submenu-item ">
@@ -96,61 +96,7 @@
                 </ul>
             </li>
             
-            <li
-                class="sidebar-item  has-sub">
-                <a href="#" class='sidebar-link'>
-                    <i class="bi bi-journal-check"></i>
-                    <span>Form Validation</span>
-                </a>
-                <ul class="submenu ">
-                    <li class="submenu-item ">
-                        <a href="form-validation-parsley.html">Parsley</a>
-                    </li>
-                </ul>
-            </li>
-            
-            <li
-                class="sidebar-item  has-sub">
-                <a href="#" class='sidebar-link'>
-                    <i class="bi bi-file-earmark-spreadsheet-fill"></i>
-                    <span>Datatables</span>
-                </a>
-                <ul class="submenu ">
-                    <li class="submenu-item ">
-                        <a href="table-datatable.html">Datatable</a>
-                    </li>
-                    <li class="submenu-item ">
-                        <a href="table-datatable-jquery.html">Datatable (jQuery)</a>
-                    </li>
-                </ul>
-            </li>
-            
-            <li
-                class="sidebar-item  has-sub">
-                <a href="#" class='sidebar-link'>
-                    <i class="bi bi-bar-chart-fill"></i>
-                    <span>Charts</span>
-                </a>
-                <ul class="submenu ">
-                    <li class="submenu-item ">
-                        <a href="ui-chart-chartjs.html">ChartJS</a>
-                    </li>
-                    <li class="submenu-item ">
-                        <a href="ui-chart-apexcharts.html">Apexcharts</a>
-                    </li>
-                </ul>
-            </li>
-            
             <li class="sidebar-title">Pages</li>
-            
-            <li
-                class="sidebar-item  ">
-                <a href="application-gallery.html" class='sidebar-link'>
-                    <i class="bi bi-image-fill"></i>
-                    <span>Photo Gallery</span>
-                </a>
-            </li>
-            
             <li
                 class="sidebar-item  has-sub">
                 <a href="#" class='sidebar-link'>
@@ -177,23 +123,6 @@
                     <span>Documentation</span>
                 </a>
             </li>
-            
-            <li
-                class="sidebar-item  ">
-                <a href="https://github.com/zuramai/mazer/blob/main/CONTRIBUTING.md" class='sidebar-link'>
-                    <i class="bi bi-puzzle"></i>
-                    <span>Contribute</span>
-                </a>
-            </li>
-            
-            <li
-                class="sidebar-item  ">
-                <a href="https://github.com/zuramai/mazer#donation" class='sidebar-link'>
-                    <i class="bi bi-cash"></i>
-                    <span>Donate</span>
-                </a>
-            </li>
-            
         </ul>
     </div>
 </div>

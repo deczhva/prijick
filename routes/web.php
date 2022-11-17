@@ -31,6 +31,6 @@ Route::get('/balita', [BalitaController::class, 'index']);
 Route::get('/lansia', [LansiaController::class, 'index']);
 Route::get('/vitamin', [VitaminAController::class, 'index']);
 
-
+Route::post('/balita/add', [BalitaController::class, 'storeBalita']);
 
 

@@ -19,7 +19,7 @@ class BalitaController extends Controller
      */
     public function index()
     {
-        $balita = Balita::all();
+        $balita = Balita::get();
         return view('balita.index', compact('balita'));
     }
 
@@ -39,7 +39,7 @@ class BalitaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function storeBalita(Request $request)
     {
         //Create by store
         $balita = Balita::create([
@@ -109,6 +109,6 @@ class BalitaController extends Controller
         $balita = Balita::findOrFail($balita);
         $balita->delete();
         return redirect()->route('balita.index')
-            ->with('success', 'Data Berhasil dihapus!');
+->with('success', 'Data Berhasil dihapus!');
     }
 }

@@ -3,7 +3,7 @@
 @section('container')
     
 <div class="page-heading">
-<h3>Profile Statistics</h3>
+<h3 style="color: #395B64">Profile Statistics</h3>
 </div>
 <div class="page-content">
 <section class="row">
@@ -15,7 +15,7 @@
                     <div class="row">
                         <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
                             <div class="stats-icon blue mb-2">
-                                <i class="bi bi-person-heart mb-2"></i>
+                                <i class="bi bi-person-heart mb-2" style="margin-right: 5px"></i>
                             </div>
                         </div>
                         <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
@@ -26,7 +26,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-6 col-lg-3 col-md-6">
+        <div class="col-6 col-lg-3 col-md-6" style="margin-left: 50px" >
             <div class="card">
                 <div class="card-body px-4 py-4-5">
                     <div class="row">
@@ -43,7 +43,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-6 col-lg-3 col-md-6">
+        <div class="col-6 col-lg-3 col-md-6" style="margin-left: 50px">
             <div class="card">
                 <div class="card-body px-4 py-4-5">
                     <div class="row">
