@@ -62,9 +62,6 @@
                                     <a href="" class="btn btn-outline-warning">
                                         <i class="bi bi-pencil-fill"></i>
                                     </a>
-                                    <a href="" class="btn btn-outline-secondary">
-                                        <i class="bi bi-eye-fill"></i>
-                                    </a>
                                     <button type="submit" class="btn btn-outline-danger"
                                     onclick="return confirm('Anda akan menghapus data ini')">
                                         <i class="bi bi-trash3-fill"></i>
