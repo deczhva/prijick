@@ -21,7 +21,7 @@
     <section class="section">
         <div class="card">
             <div class="card-body">
-                <button type="button" class="btn btn mb-3" data-bs-toggle="modal" data-bs-target="modalTambahLansia" style="background-color:#395B64; color:white">
+                <button type="button" class="btn btn mb-3" data-bs-toggle="modal" data-bs-target="#modalTambahLansia" style="background-color:#395B64; color:white">
                     Tambah Data
                 </button>
                 <table class="table table-striped" id="table1">

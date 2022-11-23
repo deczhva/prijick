@@ -10,7 +10,7 @@
             <div class="col-12 col-md-6 order-md-2 order-first">
                 <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Data</li>
                     </ol>
                 </nav>
@@ -20,9 +20,8 @@
     <section class="section">
         <div class="card">
             <div class="card-body">
-                <button type="button" class="btn btn mb-3" data-bs-toggle="modal" data-bs-target="#" style="background-color:#4f69db">
-                    <a href="#" style="color:white" target="_blank">
-                    Tambah Data</a>
+                <button type="button" class="btn btn mb-3" data-bs-toggle="modal" data-bs-target="#modalVitamin" style="background-color:#395B64; color:white">
+                    Tambah Data
                 </button>
                 <table class="table table-striped" id="table1">
                     <thead>

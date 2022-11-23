@@ -20,7 +20,7 @@
     </div>
 
     <section class="section">
-        <div class="card">
+        <div class="card shadow bg-white">
             <div class="card-body">
                 <button type="button" class="btn btn mb-3" data-bs-toggle="modal" data-bs-target="#modalTambahBalita" style="background-color:#395B64; color: white">
                     Tambah Data

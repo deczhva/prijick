@@ -87,8 +87,7 @@
             </li>
             
             <li class="sidebar-title">Pages</li>
-            <li
-                class="sidebar-item  has-sub">
+            <li class="sidebar-item has-sub">
                 <a href="#" class='sidebar-link'>
                     <i class="bi bi-person-badge-fill"></i>
                     <span>Authentication</span>
