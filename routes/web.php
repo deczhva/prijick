@@ -1,6 +1,9 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\BalitaController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -27,7 +30,6 @@ Route::get('/data-ibu', function () {
 
 Route::get('/data-anak', function () {
     return view('data-anak', [
-        "title" => "Data Anak"
     ]);
 });
 
@@ -64,3 +66,7 @@ Route::get('/data-lansia', function () {
 
 
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
