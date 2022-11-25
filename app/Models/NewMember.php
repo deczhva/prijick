@@ -10,9 +10,12 @@ class NewMember extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nama',
-        'alamat',
+        'nama_anak',
+        'nik_anak',
+        'jenis_kelamin_id',
         'nama_ortu',
-        'nik'
+        'nik_ortu',
+        'no_kk',
+        'alamat',
     ];
 }

@@ -40,8 +40,7 @@
                 </a>
             </li>
             
-            <li
-                class="sidebar-item  has-sub">
+            <li class="sidebar-item  has-sub">
                 <a href="#" class='sidebar-link'>
                     <i class="bi bi-stack"></i>
                     <span>Data</span>
@@ -59,7 +58,6 @@
                     <li class="submenu-item ">
                         <a class="sidebar-link" href="/kader">Data Kader</a>
                     </li>
-                    
                 </ul>
             </li>
             

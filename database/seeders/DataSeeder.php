@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Balita;
+use App\Models\JenisKelamin;
 use App\Models\User;
 use App\Models\Lansia;
 use App\Models\NewMember;
@@ -18,40 +19,18 @@ class DataSeeder extends Seeder
      */
     public function run()
     {
+        JenisKelamin::create([
+            'name' => 'lk'
+        ]);
+
+        JenisKelamin::create([
+            'name' => 'pr'
+        ]);
+
         User::create([
-            'email' => 'kader@gmail.com',
+            'name' => 'admin',
+            'email' => 'admin@gmail.com',
             'password' => bcrypt('password')
-        ]);
-
-        NewMember::create([
-            'nama' => 'anya forger',
-            'alamat' => 'jl. cakrawala depok baru',
-            'nama_ortu' => 'yor',
-            'nik' => '1234567890',
-        ]);
-
-        Balita::create([
-           'jk' => 'lk'
-        ]);
-        
-        Balita::create([
-            'jk' => 'pr'
-        ]);
-
-        Balita::create([
-            'kia' => 'ya'
-        ]);
-
-        Balita::create([
-            'kia' => 'tidak'
-        ]);
-
-        Balita::create([
-            'IMD' => 'ya'
-        ]);
-
-        Balita::create([
-            'IMD' => 'tidak'
         ]);
 
         User::create([
@@ -70,23 +49,27 @@ class DataSeeder extends Seeder
             'asam_urat' => '123456789',
             'kolesterol' => '123456789',
             'alamat' => '123456789'
-
         ]);
 
-    //     Balita::create([
-    //         'kk' => '0123456789', 
-    //         'nik' => '123456789', 
-    //         'nama' => 'anya forger', 
-    //         'jk' => 2, 
-    //         'tgl_lahir' => '2020-10-18', 
-    //         'berat_bdn' => '20 kg', 
-    //         'panjang_bdn' => '120 cm', 
-    //         'lingkar_lengan' => '15 cm', 
-    //         'lingkar_kepala' => '20 cm', 
-    //         'kia' => 1, 
-    //         'IMD' => 2, 
-    //         'nm_ortu' => 'yor',
-    //         'nik_ortu' => '123456789025555', 
-    //     ]);
+        NewMember::create([
+            'nama_anak' => 'syahputra',
+            'jenis_kelamin_id' => 1,
+            'nik_anak' => '1234567890123456',
+            'nama_ortu' => 'fulanah',
+            'nik_ortu' => '1324569870312645',
+            'no_kk' => '7894561230123456',
+            'alamat' => 'jl.apa hayo no. 32 ya condet'
+        ]);
+
+        Balita::create([
+            'new_member_id' => 1,
+            'tgl_lahir' => '2020-06-08',
+            'berat_bdn' => '20 Kg',
+            'panjang_bdn' => '120 Cm',
+            'lingkar_lengan' => '35 Cm',
+            'lingkar_kepala' => '60 Cm',
+            'kia' => 'tidak',
+            'IMD' => 'tidak',
+        ]);
     }   
 }
