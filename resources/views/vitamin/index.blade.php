@@ -1,16 +1,17 @@
 @extends('layouts.main')
 
 @section('container')
+@include('vitamin.create')
     <div class="page-heading">
     <div class="page-title">
         <div class="row">
             <div class="col-12 col-md-6 order-md-1 order-last mb-3">
-                <h2 style="color: #395B64">Data Vitamin A</h2>
+                <h2 style="color: #395B64">Data Pemberian Vitamin A</h2>
             </div>
             <div class="col-12 col-md-6 order-md-2 order-first">
                 <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="/" style="color: #2C3333">Dashboard</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Data</li>
                     </ol>
                 </nav>
@@ -31,12 +32,13 @@
                             <th>Nama</th>
                             <th>Jenis Kelamin</th>
                             <th>Tanggal Lahir</th>
+                            <th>Alamat</th>
                             <th>Tanggal Pemberian</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
 
-                @foreach ($vitaminA as $v)
+                @foreach ($vitaminA as $v)        
                     <tbody>
                         <tr>
                             <td>{{ $loop->iteration++ }}</td>
@@ -46,6 +48,7 @@
                             <td>{{ $v->tgl_lahir }}</td>
                             <td>{{ $v->alamat }}</td>
                             <td>{{ $v->tgl_pemberian }}</td>
+
                             <td>
                                 <form action="" method="post">
                                     @csrf

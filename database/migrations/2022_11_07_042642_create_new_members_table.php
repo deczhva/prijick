@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('new_members', function (Blueprint $table) {
             $table->id();
             $table->string('nama_anak');
-            $table->foreignId('jenis_kelamin_id')->constrained();
+            $table->enum('jk', ['Laki-laki', 'Perempuan']);
             $table->string('nik_anak', 16);
             $table->string('nama_ortu');
             $table->string('nik_ortu', 16);

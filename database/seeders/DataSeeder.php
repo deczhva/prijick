@@ -7,6 +7,7 @@ use App\Models\JenisKelamin;
 use App\Models\User;
 use App\Models\Lansia;
 use App\Models\NewMember;
+use App\Models\VitaminA;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -19,13 +20,6 @@ class DataSeeder extends Seeder
      */
     public function run()
     {
-        JenisKelamin::create([
-            'name' => 'lk'
-        ]);
-
-        JenisKelamin::create([
-            'name' => 'pr'
-        ]);
 
         User::create([
             'name' => 'admin',
@@ -48,12 +42,12 @@ class DataSeeder extends Seeder
             'gula_darah' => '123456789',
             'asam_urat' => '123456789',
             'kolesterol' => '123456789',
-            'alamat' => '123456789'
+            'alamat' => 'jkt'
         ]);
 
         NewMember::create([
             'nama_anak' => 'syahputra',
-            'jenis_kelamin_id' => 1,
+            'jk' => 'Laki-laki',
             'nik_anak' => '1234567890123456',
             'nama_ortu' => 'fulanah',
             'nik_ortu' => '1324569870312645',
@@ -70,6 +64,11 @@ class DataSeeder extends Seeder
             'lingkar_kepala' => '60 Cm',
             'kia' => 'tidak',
             'IMD' => 'tidak',
+        ]);
+
+        VitaminA::create([
+            'nik' => '1234567890123456',
+            'nama' => 'lia',
         ]);
     }   
 }

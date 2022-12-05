@@ -10,21 +10,19 @@ class Balita extends Model
     use HasFactory;
 
     protected $fillable = [
-        'kk', 
-        'nik', 
-        'nama', 
-        'jk', 
-        'tgl_lahir', 
-        'berat_bdn', 
-        'panjang_bdn', 
-        'lingkar_lengan', 
-        'lingkar_kepala', 
-        'kia', 
-        'imd', 
-        'nm_ortu',
-        'nik_ortu', 
-        'alamat'
+        'new_member_id',
+        'tgl_lahir',
+        'berat_bdn',
+        'panjang_bdn',
+        'lingkar_lengan',
+        'lingkar_kepala',
+        'kia',
+        'IMD'
     ];
+
+    public function NewMember(){
+        return $this->belongsTo(NewMember::class, 'id', 'new_member_id');
+    }
 
     public $timestamps = true;
 }

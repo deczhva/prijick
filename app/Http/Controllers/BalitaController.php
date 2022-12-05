@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Balita;
+use App\Models\NewMember;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
@@ -20,7 +21,8 @@ class BalitaController extends Controller
     public function index()
     {
         $balita = Balita::get();
-        return view('balita.index', compact('balita'));
+        $newMember =  NewMember::get();
+        return view('balita.index', compact('balita', 'newMember'));
     }
 
     /**
@@ -39,14 +41,11 @@ class BalitaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function storeBalita(Request $request)
+    public function store(Request $request)
     {
         //Create by store
         $balita = Balita::create([
-            'kk' => $request->kk,
-            'nik' => $request->nik,
-            'nama' => $request->nama,
-            'jk' => $request->jk,
+            'new_member_id' => $request->new_member_id,
             'tgl_lahir' => $request->tgl_lahir,
             'berat_bdn' => $request->berat_bdn,
             'panjang_bdn' => $request->panjang_bdn,
@@ -54,12 +53,10 @@ class BalitaController extends Controller
             'lingkar_kepala' => $request->lingkar_kepala,
             'kia' => $request->kia,
             'imd' => $request->imd,
-            'nm_ortu' => $request->nm_ortu,
-            'nik_ortu' => $request->nik_ortu,
-            'alamat' => $request->alamat
         ]);
 
-        return redirect()->back()->with('status', 'success')->with('balita', $balita);
+        return redirect()->back()->with('status', 'success');
+        dd($balita);
     }
 
     /**

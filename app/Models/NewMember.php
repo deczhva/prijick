@@ -12,10 +12,14 @@ class NewMember extends Model
     protected $fillable = [
         'nama_anak',
         'nik_anak',
-        'jenis_kelamin_id',
+        'jk',
         'nama_ortu',
         'nik_ortu',
         'no_kk',
         'alamat',
     ];
+
+    public function Balita(){
+        return $this->hasOne(Balita::class, 'id');
+    }
 }

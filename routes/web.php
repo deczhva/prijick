@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\BalitaController;
 use App\Http\Controllers\LansiaController;
 use App\Http\Controllers\VitaminAController;
+use App\Http\Controllers\NewMemberController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -28,13 +29,18 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/balita', [BalitaController::class, 'index']);
+// Route::post('/balita/add', [BalitaController::class, 'storeBalita']);
+Route::get('/balita', [BalitaController::class, 'index'])->name('balita.index');
+Route::post('/balita/store', [BalitaController::class, 'store'])->name('balita.store');
+
+
 Route::get('/lansia', [LansiaController::class, 'index']);
 Route::get('/vitamin', [VitaminAController::class, 'index']);
 
-Route::post('/balita/add', [BalitaController::class, 'storeBalita']);
 
 
+Route::get('/member', [NewMemberController::class, 'index'])->name('member.index');
+Route::get('/member/store', [NewMemberController::class, 'store'])->name('member.store');
 
 Auth::routes();
 

@@ -1,24 +1,23 @@
 @extends('layouts.main')
 
 @section('container')
-@include('balita.create')
-<div class="page-heading">
+@include('new-member.create')
+    <div class="page-heading">
     <div class="page-title">
         <div class="row">
             <div class="col-12 col-md-6 order-md-1 order-last mb-3">
-                <h2 style="color: #395B64">Data Balita</h2>
+                <h2 style="color: #395B64">Data Member Baru</h2>
             </div>
             <div class="col-12 col-md-6 order-md-2 order-first">
                 <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="/" style="color: #2C3333">Dashboard</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Data</li>
-                    </ol>   
+                    </ol>
                 </nav>
             </div>
         </div>
     </div>
-
     <section class="section">
         <div class="card">
             <div class="card-body">
