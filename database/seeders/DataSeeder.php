@@ -45,18 +45,14 @@ class DataSeeder extends Seeder
             'alamat' => 'jkt'
         ]);
 
-        NewMember::create([
+        Balita::create([
             'nama_anak' => 'syahputra',
             'jk' => 'Laki-laki',
             'nik_anak' => '1234567890123456',
             'nama_ortu' => 'fulanah',
             'nik_ortu' => '1324569870312645',
             'no_kk' => '7894561230123456',
-            'alamat' => 'jl.apa hayo no. 32 ya condet'
-        ]);
-
-        Balita::create([
-            'new_member_id' => 1,
+            'alamat' => 'jl.apa hayo no. 32 ya condet',
             'tgl_lahir' => '2020-06-08',
             'berat_bdn' => '20 Kg',
             'panjang_bdn' => '120 Cm',

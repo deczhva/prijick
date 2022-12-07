@@ -20,8 +20,9 @@ class BalitaController extends Controller
      */
     public function index()
     {
-        $balita = Balita::get();
-        $newMember =  NewMember::get();
+        $balita = Balita::all();
+        $newMember =  NewMember::all();
+        // dd($newMember);
         return view('balita.index', compact('balita', 'newMember'));
     }
 
@@ -55,8 +56,8 @@ class BalitaController extends Controller
             'imd' => $request->imd,
         ]);
 
-        return redirect()->back()->with('status', 'success');
-        dd($balita);
+        return redirect()->back()->with('status', 'success')->with('data',$balita);
+        // dd($balita);
     }
 
     /**

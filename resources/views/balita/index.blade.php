@@ -45,7 +45,7 @@
 
                 @foreach ($newMember as $n)        
                     <tbody>
-                        {{-- @dd($n->id) --}}
+                        {{-- @dd($newMember) --}}
                         <tr>
                             <td>{{ $loop->iteration++ }}</td>
                             <td>{{ $n->nama_anak }}</td>
