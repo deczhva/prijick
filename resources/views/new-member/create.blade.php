@@ -14,7 +14,7 @@
                     </div>
                     <div class="col">
                         <label for="jk">Jenis Kelamin</label>
-                        <select id="jk" class="form-select">
+                        <select id="jk" class="form-select" name="jk">
                             <option selected disabled>--Pilih--</option>
                             <option value="Perempuan">Perempuan</option>
                             <option value="Laki-laki">Laki-Laki</option>

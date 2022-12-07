@@ -1,29 +1,32 @@
-<div class="modal fade" tabindex="-1" id="modalTambahBalita" aria-labelledby="modalTambahBalita" aria-hidden="true">
+<div class="modal fade" id="modalTambahBalita" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" style="color: #395B64">Tambah Data Balita</h5>
-          {{-- <button type="button" class="btn-close" data-bs-dismiss"modal" aria-label="Close"></button> --}}
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Tambah Data</h1>
         </div>
         <form action="{{ route('balita.store') }}" method="POST">
-        @csrf
+            @csrf
         <div class="modal-body">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col">
-                        <label for="kk">No Kartu Keluarga</label>
-                        <input name="kk" type="text" class="form-control" placeholder="Nomor KK" >
+                        <label for="nama">Nama</label>
+                        <input name="nama" type="text" class="form-control" placeholder="Nama lengkap">
                     </div>
                     <div class="col">
-                        <label for="nik">NIK</label>
-                        <input name="nik_anak" type="text" min="16" class="form-control" placeholder="NIK anak">
+                        <label for="jk">Jenis Kelamin</label>
+                        <select id="jk" class="form-select">
+                            <option selected disabled>--Pilih--</option>
+                            <option>Perempuan</option>
+                            <option>Laki-Laki</option>
+                        </select>
                     </div>
                 </div>
             </div>
             <div class="container-fluid mt-3">
                 <div class="row">
                     <div class="col">
-                        <label for="nama">Nama</label>
+                        <label for="nama">NIK </label>
                         <input name="nama_anak" type="text" class="form-control" placeholder="Nama lengkap">
                     </div>
                     <div class="col">
@@ -105,11 +108,13 @@
                 </div>
             </div>
         </div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button class="btn btn-success" style="background-color: #395B64; color: white;">Save changes</button>
-        </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn" style="background-color: #395B64; color: white">Save changes</button>
+            </div>
         </form>
       </div>
     </div>
   </div>
+
+

@@ -32,6 +32,7 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 // Route::post('/balita/add', [BalitaController::class, 'storeBalita']);
 Route::get('/balita', [BalitaController::class, 'index'])->name('balita.index');
 Route::post('/balita/store', [BalitaController::class, 'store'])->name('balita.store');
+Route::delete('/balita/delete/{$id}', [BalitaController::class, 'destroy'])->name('balita.delete');
 
 
 Route::get('/lansia', [LansiaController::class, 'index']);

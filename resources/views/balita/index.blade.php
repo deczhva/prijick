@@ -2,6 +2,9 @@
 
 @section('container')
 @include('balita.create')
+@include('balita.edit')
+@include('balita.show')
+@include('balita.delete')
 <div class="page-heading">
     <div class="page-title">
         <div class="row">
@@ -22,7 +25,7 @@
     <section class="section">
         <div class="card">
             <div class="card-body">
-                <button type="button" class="btn btn mb-3" data-bs-toggle="modal" data-bs-target="#modalTambahMember" style="background-color:#395B64; color:white">
+                <button type="button" class="btn btn mb-3" data-bs-toggle="modal" data-bs-target="#modalTambahBalita" style="background-color:#395B64; color:white">
                     Tambah Data
                 </button>
                 <table class="table table-striped" id="table1">
@@ -42,6 +45,7 @@
 
                 @foreach ($newMember as $n)        
                     <tbody>
+                        {{-- @dd($n->id) --}}
                         <tr>
                             <td>{{ $loop->iteration++ }}</td>
                             <td>{{ $n->nama_anak }}</td>
@@ -53,17 +57,9 @@
                             <td>{{ $n->alamat }}</td>
 
                             <td>
-                                <form action="" method="post">
-                                    @csrf
-                                    @method('delete')
-                                    <a href="" class="btn btn-outline-warning">
-                                        <i class="bi bi-pencil-fill"></i>
-                                    </a>
-                                    <button type="submit" class="btn btn-outline-danger"
-                                    onclick="return confirm('Anda akan menghapus data ini')">
-                                        <i class="bi bi-trash3-fill"></i>
-                                    </button>
-                                </form>
+                                <button class="btn btn-outline-success" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal{{ $n->id }}"><i class="bi bi-eye-fill"></i></button>
+                                <button class="btn btn-outline-warning" type="button" data-bs-toggle="modal" data-bs-target="#edit-balita{{ $n->id }}"><i class="bi bi-pencil-fill"></i></button>
+                                <a class="btn shadow btn-outline-danger " data-bs-toggle="modal" data-bs-target="#delete-balita{{ $n->id }}"><i class="bi bi-trash3-fill"></i></i></a>
                             </td>
                         </tr>
 

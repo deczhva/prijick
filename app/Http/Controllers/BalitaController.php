@@ -32,7 +32,7 @@ class BalitaController extends Controller
      */
     public function create()
     {
-       //
+        //
     }
 
     /**
@@ -101,11 +101,11 @@ class BalitaController extends Controller
      * @param  \App\Models\Balita  $balita
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Balita $balita)
+    public function destroy(Balita $balita, $id)
     {
-        $balita = Balita::findOrFail($balita);
+        $balita = Balita::find($id);
         $balita->delete();
-        return redirect()->route('balita.index')
-->with('success', 'Data Berhasil dihapus!');
+        // dd($balita);
+        return redirect()->back();
     }
 }
