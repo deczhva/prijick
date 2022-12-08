@@ -19,7 +19,7 @@ class NewMemberController extends Controller
     public function index()
     {
         $newMember = NewMember::all();
-        return view('new-member.index', compact('newMember'));
+        // return view('new-member.index', compact('newMember'));
     }
 
     /**

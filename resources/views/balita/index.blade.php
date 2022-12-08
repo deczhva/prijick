@@ -1,10 +1,10 @@
 @extends('layouts.main')
 
-@section('container')
 @include('balita.create')
 @include('balita.edit')
 @include('balita.show')
 @include('balita.delete')
+@section('container')
 <div class="page-heading">
     <div class="page-title">
         <div class="row">
@@ -43,9 +43,9 @@
                         </tr>
                     </thead>
 
-                @foreach ($newMember as $n)        
+                @foreach ($balita as $n)        
                     <tbody>
-                        {{-- @dd($newMember) --}}
+                        {{-- @dd($balita) --}}
                         <tr>
                             <td>{{ $loop->iteration++ }}</td>
                             <td>{{ $n->nama_anak }}</td>

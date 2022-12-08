@@ -46,7 +46,13 @@ class BalitaController extends Controller
     {
         //Create by store
         $balita = Balita::create([
-            'new_member_id' => $request->new_member_id,
+            'nama_anak' => $request->nama_anak,
+            'nik_anak' => $request->nik_anak,
+            'jk' => $request->jk,
+            'nama_ortu' => $request->nama_ortu,
+            'nik_ortu' => $request->nik_ortu,
+            'no_kk' => $request->no_kk,
+            'alamat' => $request->alamat,
             'tgl_lahir' => $request->tgl_lahir,
             'berat_bdn' => $request->berat_bdn,
             'panjang_bdn' => $request->panjang_bdn,

@@ -63,8 +63,8 @@ class DataSeeder extends Seeder
         ]);
 
         VitaminA::create([
-            'nik' => '1234567890123456',
-            'nama' => 'lia',
+            'balita_id' => 1,
+            'tgl_pemberian' => '2022/09/10'
         ]);
     }   
 }

@@ -40,8 +40,8 @@ Route::get('/vitamin', [VitaminAController::class, 'index']);
 
 
 
-Route::get('/member', [NewMemberController::class, 'index'])->name('member.index');
-Route::get('/member/store', [NewMemberController::class, 'store'])->name('member.store');
+// Route::get('/member', [NewMemberController::class, 'index'])->name('member.index');
+// Route::get('/member/store', [NewMemberController::class, 'store'])->name('member.store');
 
 Auth::routes();
 

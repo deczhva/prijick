@@ -142,9 +142,9 @@
                                 <span>Data</span>
                             </a>
                             <ul class="submenu active">
-                                <li class="submenu-item ">
+                                {{-- <li class="submenu-item ">
                                     <a class="sidebar-link" href="/member">Data Baru</a>
-                                </li>
+                                </li> --}}
                                 <li class="submenu-item ">
                                     <a class="sidebar-link" href="/balita">Data Balita</a>
                                 </li>
