@@ -20,4 +20,8 @@ class VitaminA extends Model
 
     public $timestamps = true;
 
+    public function Balita(){
+        return $this->hasOne(Balita::class);
+    }
+
 }

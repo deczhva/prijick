@@ -15,11 +15,6 @@
                                 <input name="nama" type="text" class="form-control" value="{{ $n->nama_anak }}"
                                     disabled>
                             </div>
-                            <div class="col">
-                                <label for="jk">Jenis Kelamin</label>
-                                <input name="nama" type="text" class="form-control" value="{{ $n->jk }}"
-                                    disabled>
-                            </div>
                         </div>
                     </div>
                     <div class="container-fluid mt-3">
@@ -70,11 +65,7 @@
                             </div>
                             <div class="col">
                                 <label for="imd">IMD</label>
-                                <select id="imd" class="form-select">
-                                    <option selected disabled>--Pilih--</option>
-                                    <option>Ya</option>
-                                    <option>Tidak</option>
-                                </select>
+                                <input type="text" class="form-control" name="kia" value="{{ $n->IMD }}" disabled>
                             </div>
                         </div>
                     </div>
@@ -82,11 +73,11 @@
                         <div class="row">
                             <div class="col">
                                 <label for="nm_ortu">Nama Orang Tua</label>
-                                <input name="" type="text" class="form-control" placeholder="Nama lengkap">
+                                <input type="text" class="form-control" name="nama_ortu" value="{{ $n->nama_ortu }}" disabled>
                             </div>
                             <div class="col">
                                 <label for="nik_ortu">NIK Orang Tua</label>
-                                <input name="" type="text" class="form-control" placeholder="NIK orang tua">
+                                <input type="text" class="form-control" name="nik_ortu" value="{{ $n->nik_ortu }}" disabled>
                             </div>
                         </div>
                     </div>
@@ -94,7 +85,7 @@
                         <div class="row">
                             <div class="col">
                                 <label for="alamat">Alamat</label>
-                                <textarea class="form-control" placeholder="Alamat lengkap" id="floatingTextarea2" style="height: 100px"></textarea>
+                                <textarea class="form-control" placeholder="{{ $n->alamat }}" id="floatingTextarea2" style="height: 100px" disabled></textarea>
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -110,17 +101,3 @@
 @endforeach
 
 {{-- <td>{{ $loop->iteration++ }}</td> --}}
-<table>
-    <td>{{ $n->nik_anak }}</td>
-    <td>{{ $n->nama_ortu }}</td>
-    <td>{{ $n->nik_ortu }}</td>
-    <td>{{ $n->no_kk }}</td>
-    <td>{{ $n->alamat }}</td>
-    <td>{{ $n->tgl_lahir }}</td>
-    <td>{{ $n->berat_bdn }}</td>
-    <td>{{ $n->panjang_bdn }}</td>
-    <td>{{ $n->lingkar_lengan }}</td>
-    <td>{{ $n->lingkar_kepala }}</td>
-    <td>{{ $n->kia }}</td>
-    <td>{{ $n->IMD }}</td>
-</table>

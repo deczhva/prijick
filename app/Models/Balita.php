@@ -30,5 +30,8 @@ class Balita extends Model
         return $this->belongsTo(NewMember::class, 'id', 'new_member_id');
     }
 
+    public function VitaminA(){
+        return $this->belongsTo(VitaminA::class);
+    }
     public $timestamps = true;
 }

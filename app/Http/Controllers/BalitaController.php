@@ -84,9 +84,9 @@ class BalitaController extends Controller
      * @param  \App\Models\Balita  $balita
      * @return \Illuminate\Http\Response
      */
-    public function edit(Balita $balita)
+    public function edit(Balita $balita, $id)
     {
-        $balita = Balita::findOrFail($balita);
+        $balita = Balita::findOrFail($id);
         return view('balita.edit', compact('balita'));
     }
 
@@ -97,9 +97,25 @@ class BalitaController extends Controller
      * @param  \App\Models\Balita  $balita
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Balita $balita)
+    public function update(Request $request,$id)
     {
-        //
+        $balita = Balita::findOrFail($id)->update([
+            'nama_anak' => $request->nama_anak,
+            'nik_anak' => $request->nik_anak,
+            'jk' => $request->jk,
+            'nama_ortu' => $request->nama_ortu,
+            'nik_ortu' => $request->nik_ortu,
+            'no_kk' => $request->no_kk,
+            'alamat' => $request->alamat,
+            'tgl_lahir' => $request->tgl_lahir,
+            'berat_bdn' => $request->berat_bdn,
+            'panjang_bdn' => $request->panjang_bdn,
+            'lingkar_lengan' => $request->lingkar_lengan,
+            'lingkar_kepala' => $request->lingkar_kepala,
+            'kia' => $request->kia,
+            'imd' => $request->imd,
+        ]);
+        return redirect()->back()->with('status', 'success')->with($balita);
     }
 
     /**
