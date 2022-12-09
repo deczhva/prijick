@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class NewMemberController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +18,8 @@ class NewMemberController extends Controller
      */
     public function index()
     {
-        //
+        $newMember = NewMember::all();
+        // return view('new-member.index', compact('newMember'));
     }
 
     /**
@@ -35,7 +40,17 @@ class NewMemberController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $newMember = NewMember::create([
+            'nama_anak' => $request->nama_anak,
+            'nik_anak' => $request->nik_anak,
+            'jk' => $request->jk,
+            'nama_ortu' => $request->nama_ortu,
+            'nik_ortu' => $request->nik_ortu,
+            'no_kk' => $request->no_kk,
+            'alamat' => $request->alamat
+        ]);
+
+        return redirect()->back()->with('status', 'success')->with('new-member', $newMember);
     }
 
     /**

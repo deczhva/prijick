@@ -1,31 +1,27 @@
 @extends('layouts.main')
 
-@include('balita.create')
-@include('balita.edit')
-@include('balita.show')
-@include('balita.delete')
 @section('container')
-<div class="page-heading">
+@include('new-member.create')
+    <div class="page-heading">
     <div class="page-title">
         <div class="row">
             <div class="col-12 col-md-6 order-md-1 order-last mb-3">
-                <h2 style="color: #395B64">Data Balita</h2>
+                <h2 style="color: #395B64">Data Member Baru</h2>
             </div>
             <div class="col-12 col-md-6 order-md-2 order-first">
                 <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="/" style="color: #2C3333">Dashboard</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Data</li>
-                    </ol>   
+                    </ol>
                 </nav>
             </div>
         </div>
     </div>
-
     <section class="section">
         <div class="card">
             <div class="card-body">
-                <button type="button" class="btn btn mb-3" data-bs-toggle="modal" data-bs-target="#modalTambahBalita" style="background-color:#395B64; color:white">
+                <button type="button" class="btn btn mb-3" data-bs-toggle="modal" data-bs-target="#modalTambahMember" style="background-color:#395B64; color:white">
                     Tambah Data
                 </button>
                 <table class="table table-striped" id="table1">
@@ -43,9 +39,8 @@
                         </tr>
                     </thead>
 
-                @foreach ($balita as $n)        
+                @foreach ($newMember as $n)        
                     <tbody>
-                        {{-- @dd($balita) --}}
                         <tr>
                             <td>{{ $loop->iteration++ }}</td>
                             <td>{{ $n->nama_anak }}</td>
@@ -57,9 +52,17 @@
                             <td>{{ $n->alamat }}</td>
 
                             <td>
-                                <button class="btn btn-outline-success" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal{{ $n->id }}"><i class="bi bi-eye-fill"></i></button>
-                                <button class="btn btn-outline-warning" type="button" data-bs-toggle="modal" data-bs-target="#edit-balita{{ $n->id }}"><i class="bi bi-pencil-fill"></i></button>
-                                <a class="btn shadow btn-outline-danger " data-bs-toggle="modal" data-bs-target="#delete-balita{{ $n->id }}"><i class="bi bi-trash3-fill"></i></i></a>
+                                <form action="" method="post">
+                                    @csrf
+                                    @method('delete')
+                                    <a href="" class="btn btn-outline-warning">
+                                        <i class="bi bi-pencil-fill"></i>
+                                    </a>
+                                    <button type="submit" class="btn btn-outline-danger"
+                                    onclick="return confirm('Anda akan menghapus data ini')">
+                                        <i class="bi bi-trash3-fill"></i>
+                                    </button>
+                                </form>
                             </td>
                         </tr>
 

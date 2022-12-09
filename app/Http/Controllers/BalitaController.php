@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Balita;
+use App\Models\NewMember;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
@@ -19,8 +20,10 @@ class BalitaController extends Controller
      */
     public function index()
     {
-        $balita = Balita::get();
-        return view('balita.index', compact('balita'));
+        $balita = Balita::all();
+        $newMember =  NewMember::all();
+        // dd($newMember);
+        return view('balita.index', compact('balita', 'newMember'));
     }
 
     /**
@@ -30,7 +33,7 @@ class BalitaController extends Controller
      */
     public function create()
     {
-       //
+        //
     }
 
     /**
@@ -39,14 +42,17 @@ class BalitaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function storeBalita(Request $request)
+    public function store(Request $request)
     {
         //Create by store
         $balita = Balita::create([
-            'kk' => $request->kk,
-            'nik' => $request->nik,
-            'nama' => $request->nama,
+            'nama_anak' => $request->nama_anak,
+            'nik_anak' => $request->nik_anak,
             'jk' => $request->jk,
+            'nama_ortu' => $request->nama_ortu,
+            'nik_ortu' => $request->nik_ortu,
+            'no_kk' => $request->no_kk,
+            'alamat' => $request->alamat,
             'tgl_lahir' => $request->tgl_lahir,
             'berat_bdn' => $request->berat_bdn,
             'panjang_bdn' => $request->panjang_bdn,
@@ -54,12 +60,10 @@ class BalitaController extends Controller
             'lingkar_kepala' => $request->lingkar_kepala,
             'kia' => $request->kia,
             'imd' => $request->imd,
-            'nm_ortu' => $request->nm_ortu,
-            'nik_ortu' => $request->nik_ortu,
-            'alamat' => $request->alamat
         ]);
 
-        return redirect()->back()->with('status', 'success')->with('balita', $balita);
+        return redirect()->back()->with('status', 'success')->with('data',$balita);
+        // dd($balita);
     }
 
     /**
@@ -104,11 +108,11 @@ class BalitaController extends Controller
      * @param  \App\Models\Balita  $balita
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Balita $balita)
+    public function destroy(Balita $balita, $id)
     {
-        $balita = Balita::findOrFail($balita);
+        $balita = Balita::find($id);
         $balita->delete();
-        return redirect()->route('balita.index')
-->with('success', 'Data Berhasil dihapus!');
+        // dd($balita);
+        return redirect()->back();
     }
 }

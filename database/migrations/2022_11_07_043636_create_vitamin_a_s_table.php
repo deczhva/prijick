@@ -15,11 +15,7 @@ return new class extends Migration
     {
         Schema::create('vitamin_a_s', function (Blueprint $table) {
             $table->id();
-            $table->string('nik');
-            $table->string('nama');
-            $table->enum('jk', ['lk', 'pr']);
-            $table->date('tgl_lahir');
-            $table->string('alamat');
+            $table->foreignId('balita_id')->constrained();
             $table->date('tgl_pemberian');
             $table->timestamps();
         });
