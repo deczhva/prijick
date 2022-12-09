@@ -1,9 +1,9 @@
-@foreach ($newMember as $t)
+@foreach ($balita as $t)
     <div class="modal fade" id="delete-balita{{ $t->id }}" tabindex="-1" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form action={{ url('/visitor/delete/' . $t->id) }} method="POST" enctype="multipart/form-data">
+                <form action={{ url('/balita/delete/' . $t->id) }} method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('DELETE')
                     <div class="modal-body">
