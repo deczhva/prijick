@@ -10,9 +10,16 @@ class NewMember extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nama',
-        'alamat',
+        'nama_anak',
+        'nik_anak',
+        'jk',
         'nama_ortu',
-        'nik'
+        'nik_ortu',
+        'no_kk',
+        'alamat',
     ];
+
+    public function Balita(){
+        return $this->hasOne(Balita::class, 'id');
+    }
 }

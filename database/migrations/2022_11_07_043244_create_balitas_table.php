@@ -15,9 +15,13 @@ return new class extends Migration
     {
         Schema::create('balitas', function (Blueprint $table) {
             $table->id();
-            $table->string('kk');
-            $table->foreignId('new_member_id')->constrained();
-            $table->enum('jk', ['lk', 'pr']);
+            $table->string('nama_anak');
+            $table->enum('jk', ['Laki-laki', 'Perempuan']);
+            $table->string('nik_anak', 16);
+            $table->string('nama_ortu');
+            $table->string('nik_ortu', 16);
+            $table->string('no_kk', 16);
+            $table->string('alamat');
             $table->date('tgl_lahir');
             $table->string('berat_bdn');
             $table->string('panjang_bdn');
@@ -25,8 +29,6 @@ return new class extends Migration
             $table->string('lingkar_kepala');
             $table->enum('kia', ['ya', 'tidak']);
             $table->enum('IMD', ['ya', 'tidak']);
-            $table->string('nik_ortu');
-            $table->string('alamat');
             $table->timestamps();
         });
     }
