@@ -39,7 +39,7 @@ class LansiaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function storeLansia(Request $request)
+    public function store(Request $request)
     {
         $lansia = Lansia::create([
             'nik' => $request->nik,
@@ -49,9 +49,10 @@ class LansiaController extends Controller
             'tensi' => $request->tensi,
             'gula_darah' => $request->gula_darah,
             'asam_urat' => $request->asam_urat,
+            'alamat' => $request->alamat,
             'kolesterol' => $request->kolesterol
         ]);
-
+        // dd($lansia);
         return redirect()->back()->with('status', 'success')->with('lansia', $lansia);
     }
 
@@ -86,9 +87,20 @@ class LansiaController extends Controller
      * @param  \App\Models\Lansia  $lansia
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Lansia $lansia)
+    public function update(Request $request, $id)
     {
-        //
+        $lansia = Lansia::findOrFail($id)->update([
+            'nik' => $request->nik,
+            'nama' => $request->nama,
+            'tinggi_bdn' => $request->tinggi_bdn,
+            'berat_bdn' => $request->berat_bdn,
+            'tensi' => $request->tensi,
+            'gula_darah' => $request->gula_darah,
+            'asam_urat' => $request->asam_urat,
+            'alamat' => $request->alamat,
+            'kolesterol' => $request->kolesterol
+        ]);
+        return redirect()->back()->with('status', 'success')->with('lansia', $lansia);
     }
 
     /**
@@ -97,11 +109,11 @@ class LansiaController extends Controller
      * @param  \App\Models\Lansia  $lansia
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Lansia $lansia)
+    public function destroy($id)
     {
-        $lansia = Lansia::findOrFail($lansia);
+        $lansia =Lansia::find($id);
         $lansia->delete();
-        return redirect()->route('lansia.index')
-            ->with('success', 'Data Berhasil dihapus!');
+        // dd($lansia);
+        return redirect()->back();
     }
 }

@@ -37,6 +37,10 @@ Route::delete('/balita/delete/{id}', [BalitaController::class, 'destroy'])->name
 
 
 Route::get('/lansia', [LansiaController::class, 'index']);
+Route::post('/lansia/store', [LansiaController::class, 'store'])->name('lansia.store');
+Route::put('/lansia/update/{id}', [LansiaController::class, 'update']);
+Route::delete('/lansia/delete/{id}', [LansiaController::class, 'destroy'])->name('lansia.delete');
+
 Route::get('/vitamin', [VitaminAController::class, 'index']);
 
 

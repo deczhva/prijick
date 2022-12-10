@@ -2,6 +2,9 @@
 
 @section('container')
 @include('lansia.create')
+@include('lansia.edit')
+@include('lansia.delete')
+@include('lansia.show')
     <div class="page-heading">
     <div class="page-title">
         <div class="row">
@@ -42,7 +45,8 @@
                     </thead>
 
                 @foreach ($lansia as $l)        
-                    <tbody>
+                {{-- @dd($lansia) --}}
+                <tbody>
                         <tr>
                             <td>{{ $loop->iteration++ }}</td>
                             <td>{{ $l->nik }}</td>
@@ -56,17 +60,8 @@
                             <td>{{ $l->alamat }}</td>
 
                             <td>
-                                <form action="" method="post">
-                                    @csrf
-                                    @method('delete')
-                                    <a href="" class="btn btn-outline-warning">
-                                        <i class="bi bi-pencil-fill"></i>
-                                    </a>
-                                    <button type="submit" class="btn btn-outline-danger"
-                                    onclick="return confirm('Anda akan menghapus data ini')">
-                                        <i class="bi bi-trash3-fill"></i>
-                                    </button>
-                                </form>
+                                <button class="btn btn-outline-warning" type="button" data-bs-toggle="modal" data-bs-target="#edit-lansia{{ $l->id }}"><i class="bi bi-pencil-fill"></i></button>
+                                <a class="btn shadow btn-outline-danger " data-bs-toggle="modal" data-bs-target="#delete-lansia{{ $l->id }}"><i class="bi bi-trash3-fill"></i></i></a>
                             </td>
                         </tr>
 
