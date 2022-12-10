@@ -1,10 +1,10 @@
 @extends('layouts.main');
 
 @section('container')
-    
 <div class="page-heading">
 <h3 style="color: #395B64">Profile Statistics</h3>
 </div>
+    
 <div class="page-content">
 <section class="row">
 <div class="col-12 col-lg-9">
@@ -79,6 +79,7 @@
         </div>
     </div>
 </div>
+<div id="chart"></div>
 </section>
 
 </div>
