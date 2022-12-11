@@ -17,7 +17,8 @@ class Lansia extends Model
         'tensi',
         'gula_darah',
         'asam_urat',
-        'kolesterol'
+        'kolesterol',
+        'alamat'
     ];
 
     public $timestamps = true;

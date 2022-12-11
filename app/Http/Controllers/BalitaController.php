@@ -131,4 +131,10 @@ class BalitaController extends Controller
         // dd($balita);
         return redirect()->back();
     }
+
+    public function laporan()
+    {
+        $pdf = PDF::loadView('laporan.laporan');
+        return $pdf->download('LAPORAN POSYANDU.pdf');
+    }
 }
